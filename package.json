@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "http": "0.0.0",
     "http-errors": "^1.7.2",
     "mongoose": "^5.5.12",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "normalize-port": "^1.0.0"
   }
 }
