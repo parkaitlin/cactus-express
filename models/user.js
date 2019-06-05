@@ -6,10 +6,15 @@ const UserSchema = new mongoose.Schema({
     lastName: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    membership: {type: String, required: true},
+    hometown: String,
+    state: String,
+    member: Boolean,
+    paid: {type: Boolean, default: false},
+    status: {type: String, required: true},
     registeredTournaments: [],
-    earnings: String,
-    admin: {type: Boolean, default: false}
+    earnings: {type: String, default: '0'},
+    admin: {type: Boolean, default: false},
+    joined: {type: Date, default: new Date()}
 })
 
 UserSchema.methods.hashPassword = function(password){

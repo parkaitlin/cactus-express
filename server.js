@@ -9,11 +9,12 @@ const path = require('path');
 // dotenv & mongodb
 require('dotenv').config();
 require('./db/db');
+
 // app
 const app = express();
 
 // define routers
-
+const authRouter = require('./routes/authR');
 
 // middleware
 
@@ -40,6 +41,7 @@ app.use(cors(corsOptions));
 
 // assign Routers
 
+app.use('/auth', authRouter);
 
 // error
 

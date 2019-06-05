@@ -39,6 +39,5 @@ const onError = (error)=>{
 }
 
 server.listen(port);
-
 server.on('error', onError);
-server.on('listening, on Listening');
+server.on('listening', onListening);
