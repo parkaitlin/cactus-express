@@ -10,11 +10,12 @@ const path = require('path');
 require('dotenv').config();
 require('./db/db');
 
+// define routers
+const authRouter = require('./routes/authR');
+
 // app
 const app = express();
 
-// define routers
-const authRouter = require('./routes/authR');
 
 // middleware
 
@@ -40,12 +41,11 @@ app.use(cors(corsOptions));
 
 
 // assign Routers
-
 app.use('/auth', authRouter);
 
-// error
 
-app.use((req, res)=>{
+// error
+app.use((req, res, next)=>{
     next(createError(404, 'please login to view this page'));
 });
 
