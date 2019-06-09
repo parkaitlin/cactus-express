@@ -19,7 +19,7 @@ module.exports = {
     },
     index: async (req, res)=>{
         try {
-            const allTours = await Tour.find({}).sort({eventId: 1})
+            const allTours = await Tour.find({}).sort({eventStartDate: 1})
             res.json({
                 status: 200,
                 tours: allTours
