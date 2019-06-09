@@ -12,6 +12,8 @@ require('./db/db');
 
 // define routers
 const authRouter = require('./routes/authR');
+const userRouter = require('./routes/userR');
+const tourRouter = require('./routes/tourR');
 
 // app
 const app = express();
@@ -42,7 +44,8 @@ app.use(cors(corsOptions));
 
 // assign Routers
 app.use('/auth', authRouter);
-
+app.use('/users', userRouter);
+app.use('/tour', tourRouter);
 
 // error
 app.use((req, res, next)=>{

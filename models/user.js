@@ -33,3 +33,14 @@ UserSchema.pre('save', function(next){
 })
 
 module.exports = mongoose.model('User', UserSchema);
+
+
+// UserSchema.methods.cleanDate = (date)=>{
+//     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+//     const month = new Date(date).getMonth()
+//     const day = new Date(date).getDate()
+//     const year = new Date(date).getFullYear()
+//     return (`${months[month]} ${day}, ${year}`)
+// }
+
+
