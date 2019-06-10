@@ -30,5 +30,20 @@ module.exports = {
                 error: error
             })
         }
+    },
+    update: async (req, res)=>{
+        try {
+            const updatedTour = await Tour.findByIdAndUpdate(req.params.id, req.body, {new: true})
+            console.log(updatedTour)
+            res.json({
+                status: 200,
+                message: "Tournament has been updated."
+            })
+            
+        } catch (error) {
+            res.json({
+                error: error
+            })
+        }
     }    
 }
