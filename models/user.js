@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
     member: Boolean,
     paid: {type: Boolean, default: false},
     status: {type: String, required: true},
-    registeredTournaments: [],
+    registeredTours: [],
     earnings: {type: String, default: '0'},
     admin: {type: Boolean, default: false},
     joined: {type: Date, default: new Date()}
