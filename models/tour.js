@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 
 const TourSchema = mongoose.Schema({
-    eventId: {type: Number},
     venue: {type: String},
     city: String,
     state: String,
     startTime: String,
-    eventStartDate: Date,
-    eventEndDate: Date,
+    eventStartDate: String,
+    eventEndDate: String,
     registeredPlayers: [],
     // leaderboard: add later will probably be an array of objects
     teeTimes: [], // array of objects {time: , players: [player1, player2, player3]}
