@@ -29,8 +29,8 @@ module.exports = {
                 updatedUser.save();
             }
             res.json({
-                user: updatedUser,
-                status: 200
+                status: 200,
+                user: updatedUser
             })
         } catch (error) {
             res.json({
